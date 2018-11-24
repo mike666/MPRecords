@@ -4,8 +4,7 @@ namespace MPConsole {
   public class ConsoleOptions {
     [Option('s', "search", Required = false, HelpText = "Search artists by keyword")]
     public string Keyword { get; set; }
-
-
+    
     [Option('l', "list", Required = false, HelpText = "List all artists")]
     public bool ListAll { get; set; }
 
