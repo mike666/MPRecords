@@ -3,7 +3,6 @@
 namespace MPRecords {
   public interface IRepositoryService {
     List<Artist> GetArtists();
-    List<string> GetArtistList();
     Artist GetArtistByName(string name);
     List<Artist> Search(string keyword);
   }

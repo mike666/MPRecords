@@ -14,16 +14,12 @@ namespace MPRepository {
       return _DataStore.GetArtists();
     }
 
-    public List<string> GetArtistList() {
-      return _DataStore.GetArtists().Select(c => c.Title).ToList();
-    }
-
     public Artist GetArtistByName(string name) {
       return _DataStore.GetArtists().FirstOrDefault(c => c.Title.Equals(name, System.StringComparison.InvariantCultureIgnoreCase));
     }
 
     public List<Artist> Search(string keyword) {
-      return new List<Artist>();
+      return GetArtists().FindAll(a => a.Title.ToLower().Contains(keyword.ToLower())).ToList();
     }
   }
 }

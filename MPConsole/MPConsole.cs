@@ -35,11 +35,15 @@ namespace MPConsole {
     }
 
     private void ListArtists() {
-      foreach (string artistName in _RepositoryService.GetArtistList()) {
-        WriteLine(artistName);
+      WriteArtists(_RepositoryService.GetArtists());
+    }
+    
+    private void WriteArtists(List<Artist> artists) {
+      foreach (Artist artist in artists) {
+        WriteLine(artist.Title);
       }
     }
-
+        
     private void listAlbums(string artistName) {
       Artist artist = _RepositoryService.GetArtistByName(artistName);
 
@@ -53,9 +57,19 @@ namespace MPConsole {
         WriteLine($"{album.Title} ({album.Rating}/10)");
       }
     }
-
+        
     private void Search(string keyword) {
       WriteLine($"Search keyword: {keyword}");
+
+      List<Artist> artists = _RepositoryService.Search(keyword);
+
+      if (artists.Count == 0) {
+        WriteLine("No results found");
+
+        return;
+      }
+
+      WriteArtists(artists);
     }
 
     private string CleanString(string s) {
