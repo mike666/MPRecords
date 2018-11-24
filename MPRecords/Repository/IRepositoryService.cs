@@ -5,5 +5,6 @@ namespace MPRecords {
     List<Artist> GetArtists();
     List<string> GetArtistList();
     Artist GetArtistByName(string name);
+    List<Artist> Search(string keyword);
   }
 }

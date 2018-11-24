@@ -21,5 +21,9 @@ namespace MPRepository {
     public Artist GetArtistByName(string name) {
       return _DataStore.GetArtists().FirstOrDefault(c => c.Title.Equals(name, System.StringComparison.InvariantCultureIgnoreCase));
     }
+
+    public List<Artist> Search(string keyword) {
+      return new List<Artist>();
+    }
   }
 }
