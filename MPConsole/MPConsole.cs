@@ -11,15 +11,15 @@ namespace MPConsole {
     }
 
     private IRepositoryService _RepositoryService;
+    private ISearchService _SearchService;
 
-    public MPConsole(IRepositoryService repositoryService) {
+    public MPConsole(IRepositoryService repositoryService, ISearchService searchService) {
       _RepositoryService = repositoryService;
+      _SearchService = searchService;
     }
 
     public void ReadInput(string[] args) {
-      Parser.Default.ParseArguments<ConsoleOptions>(args)
-      .WithParsed<ConsoleOptions>(opts => RunOptions(opts)
-      );
+      Parser.Default.ParseArguments<ConsoleOptions>(args).WithParsed<ConsoleOptions>(opts => RunOptions(opts));
     }
 
     private void RunOptions(ConsoleOptions options) {
@@ -61,15 +61,15 @@ namespace MPConsole {
     private void Search(string keyword) {
       WriteLine($"Search keyword: {keyword}");
 
-      List<Artist> artists = _RepositoryService.Search(keyword);
-
-      if (artists.Count == 0) {
+      SearchResult result = _SearchService.Search(keyword);
+            
+      if (result.Artists.Count == 0) {
         WriteLine("No results found");
 
         return;
       }
 
-      WriteArtists(artists);
+      WriteArtists(result.Artists);
     }
 
     private string CleanString(string s) {

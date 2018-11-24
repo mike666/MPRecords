@@ -4,17 +4,15 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{5122D3F5-5EDE-43A4-82B0-8431C6A7E71F}</ProjectGuid>
-    <OutputType>Exe</OutputType>
+    <ProjectGuid>{F97FD178-8E7F-450E-8073-89B1F78FF944}</ProjectGuid>
+    <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>MPConsole</RootNamespace>
-    <AssemblyName>MPConsole</AssemblyName>
+    <RootNamespace>MPSearch</RootNamespace>
+    <AssemblyName>MPSearch</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
-    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -24,7 +22,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -33,10 +30,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="CommandLine, Version=2.3.0.0, Culture=neutral, PublicKeyToken=de6f01bd326f8c32, processorArchitecture=MSIL">
-      <HintPath>..\packages\CommandLineParser.2.3.0\lib\net45\CommandLine.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -47,31 +40,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="MPConsole.cs" />
-    <Compile Include="ConsoleOptions.cs" />
-    <Compile Include="Program.cs" />
+    <Compile Include="BasicSearchService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
-    <None Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\MPData\MPData.csproj">
-      <Project>{dae5e609-8bd4-4e90-9b20-d9998c92948b}</Project>
-      <Name>MPData</Name>
-    </ProjectReference>
     <ProjectReference Include="..\MPRecords\MPRecords.csproj">
       <Project>{d85466f5-5f31-47cb-a117-eeda9278c926}</Project>
       <Name>MPRecords</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\MPRepository\MPRepository.csproj">
-      <Project>{6959402c-5f1f-42af-add6-14066a38bbd7}</Project>
-      <Name>MPRepository</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\MPSearch\MPSearch.csproj">
-      <Project>{f97fd178-8e7f-450e-8073-89b1f78ff944}</Project>
-      <Name>MPSearch</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

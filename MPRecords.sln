@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MPRepository", "MPRepositor
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MPData", "MPData\MPData.csproj", "{DAE5E609-8BD4-4E90-9B20-D9998C92948B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MPSearch", "MPSearch\MPSearch.csproj", "{F97FD178-8E7F-450E-8073-89B1F78FF944}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{DAE5E609-8BD4-4E90-9B20-D9998C92948B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DAE5E609-8BD4-4E90-9B20-D9998C92948B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DAE5E609-8BD4-4E90-9B20-D9998C92948B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F97FD178-8E7F-450E-8073-89B1F78FF944}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F97FD178-8E7F-450E-8073-89B1F78FF944}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F97FD178-8E7F-450E-8073-89B1F78FF944}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F97FD178-8E7F-450E-8073-89B1F78FF944}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
