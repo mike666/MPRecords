@@ -5,6 +5,11 @@ using System.Collections.Generic;
 
 namespace MPConsole {
   public class MPConsole {
+    public enum ExitCode : int {
+      Success = 0,
+      UnknownError = 10
+    }
+
     private IRepositoryService _RepositoryService;
 
     public MPConsole(IRepositoryService repositoryService) {
@@ -13,11 +18,11 @@ namespace MPConsole {
 
     public void ReadInput(string[] args) {
       Parser.Default.ParseArguments<ConsoleOptions>(args)
-     .WithParsed<ConsoleOptions>(opts => RunOptions(opts))
-     .WithNotParsed<ConsoleOptions>((errs) => HandleParseError(errs));
+      .WithParsed<ConsoleOptions>(opts => RunOptions(opts)
+      );
     }
 
-    private int RunOptions(ConsoleOptions options) {
+    private void RunOptions(ConsoleOptions options) {
       if (options.ListAll) {
         ListArtists();
       } else if (!String.IsNullOrEmpty(CleanString(options.Artist))) {
@@ -26,14 +31,7 @@ namespace MPConsole {
         Search(options.Keyword);
       }
 
-
-      return 0;
-    }
-
-    private int HandleParseError(IEnumerable<Error> errors) {
-      WriteLine("Unrecognized or incomplete command line.");
-
-      return 1;
+      Environment.Exit((int)ExitCode.Success);
     }
 
     private void ListArtists() {
@@ -41,7 +39,7 @@ namespace MPConsole {
         WriteLine(artistName);
       }
     }
-    
+
     private void listAlbums(string artistName) {
       Artist artist = _RepositoryService.GetArtistByName(artistName);
 
