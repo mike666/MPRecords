@@ -1,4 +1,4 @@
-﻿using MPRecords;
+﻿using MPCore;
 using System.Linq;
 
 namespace MPSearch {

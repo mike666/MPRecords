@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace MPRecords {
+namespace MPCore {
   public class SearchResult {
     public List<Artist> Artists { get; set; } = new List<Artist>();
   }

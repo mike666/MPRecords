@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MPRecords", "MPRecords\MPRecords.csproj", "{D85466F5-5F31-47CB-A117-EEDA9278C926}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MPCore", "MPRecords\MPCore.csproj", "{D85466F5-5F31-47CB-A117-EEDA9278C926}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MPConsole", "MPConsole\MPConsole.csproj", "{5122D3F5-5EDE-43A4-82B0-8431C6A7E71F}"
 EndProject

@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace MPRecords {
+namespace MPCore {
   public interface IDataStore {
     List<Artist> GetArtists();
   }

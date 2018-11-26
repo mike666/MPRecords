@@ -55,9 +55,9 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\MPRecords\MPRecords.csproj">
+    <ProjectReference Include="..\MPRecords\MPCore.csproj">
       <Project>{d85466f5-5f31-47cb-a117-eeda9278c926}</Project>
-      <Name>MPRecords</Name>
+      <Name>MPCore</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

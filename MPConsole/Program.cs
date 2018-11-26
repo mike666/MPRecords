@@ -1,8 +1,7 @@
 ﻿using MPData;
-using MPRecords;
+using MPCore;
 using MPRepository;
 using MPSearch;
-using System;
 using System.IO;
 
 namespace MPConsole {

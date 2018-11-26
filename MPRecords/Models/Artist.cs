@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace MPRecords {
+namespace MPCore {
   public class Artist {
     public string Title { get; set; }
     public string Url { get; set; }

@@ -61,9 +61,9 @@
       <Project>{dae5e609-8bd4-4e90-9b20-d9998c92948b}</Project>
       <Name>MPData</Name>
     </ProjectReference>
-    <ProjectReference Include="..\MPRecords\MPRecords.csproj">
+    <ProjectReference Include="..\MPRecords\MPCore.csproj">
       <Project>{d85466f5-5f31-47cb-a117-eeda9278c926}</Project>
-      <Name>MPRecords</Name>
+      <Name>MPCore</Name>
     </ProjectReference>
     <ProjectReference Include="..\MPRepository\MPRepository.csproj">
       <Project>{6959402c-5f1f-42af-add6-14066a38bbd7}</Project>
